@@ -1,12 +1,14 @@
 import { useState } from "react";
-import { Menu, X, Phone, Moon, Sun } from "lucide-react";
+import { Menu, X, Phone, Moon, Sun, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { label: "Beranda", href: "#beranda" },
   { label: "Paket Umroh", href: "#paket" },
+  { label: "Harga", href: "#harga" },
   { label: "Layanan", href: "#layanan" },
   { label: "Testimoni", href: "#testimoni" },
+  { label: "Affiliate", href: "/affiliate" },
   { label: "Kontak", href: "#kontak" },
 ];
 
@@ -50,8 +52,15 @@ export function Header() {
               {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
             <a
-              href="https://wa.me/6281234567890"
+              href="/affiliate"
               className="hidden md:flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              <Users className="h-4 w-4" />
+              Jadi Affiliate
+            </a>
+            <a
+              href="https://wa.me/6281234567890"
+              className="hidden md:flex items-center gap-2 rounded-md border border-green-500 text-green-600 px-4 py-2 text-sm font-medium hover:bg-green-50 transition-colors"
             >
               <Phone className="h-4 w-4" />
               Hubungi Kami
