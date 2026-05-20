@@ -27,7 +27,7 @@ export function AffiliatePage() {
               <span className="text-yellow-300">Promosi Umroh</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Bergabung menjadi Affiliate Ditoris Travelnesia dan dapatkan komisi Rp 500.000 - Rp 1.000.000+ per jamaah yang berangkat
+              Bergabung menjadi Affiliate Ditoris Travelnesia dan dapatkan komisi Rp 2.000.000 - Rp 3.500.000+ per jamaah yang berangkat
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -35,7 +35,7 @@ export function AffiliatePage() {
                 className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-white/90 transition-all hover:scale-105 shadow-xl"
               >
                 <Zap className="h-5 w-5" />
-                Daftar Sekarang - Rp 150.000
+                Daftar Sekarang - Rp 200.000
               </button>
               <a
                 href="#cara-kerja"
@@ -101,67 +101,79 @@ export function AffiliatePage() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Level Affiliate</h2>
-            <p className="text-muted-foreground text-lg">Semakin aktif, semakin besar komisi</p>
+            <p className="text-muted-foreground text-lg">Hanya 2 Tier - Simpel & Menguntungkan</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {affiliateLevels.map((level, index) => (
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {affiliateLevels.map((level) => (
               <div
                 key={level.name}
                 className={cn(
-                  "relative rounded-2xl p-8 border-2 transition-all hover:scale-105",
-                  level.color === "gold" && "bg-gradient-to-b from-yellow-50 to-amber-50 border-yellow-400 shadow-xl",
-                  level.color === "silver" && "bg-gradient-to-b from-gray-50 to-slate-50 border-gray-300",
-                  level.color === "gray" && "bg-card border-gray-200"
+                  "relative rounded-2xl p-8 border-2 transition-all hover:scale-[1.02]",
+                  level.color === "gold" && "bg-gradient-to-b from-yellow-50 to-amber-50 border-yellow-400 shadow-2xl",
+                  level.color === "silver" && "bg-gradient-to-b from-gray-50 to-slate-50 border-gray-300 shadow-lg"
                 )}
               >
                 {level.color === "gold" && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-bold">
-                      REKOMENDASI
+                    <span className="bg-yellow-400 text-yellow-900 px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                      ⭐ PLATINUM
                     </span>
                   </div>
                 )}
                 <div className="text-center mb-6">
                   <div className={cn(
-                    "w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4",
-                    level.color === "gold" && "bg-yellow-400",
-                    level.color === "silver" && "bg-gray-300",
-                    level.color === "gray" && "bg-gray-200"
+                    "w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-4 text-4xl",
+                    level.color === "gold" && "bg-gradient-to-br from-yellow-300 to-yellow-500 shadow-lg",
+                    level.color === "silver" && "bg-gradient-to-br from-gray-200 to-gray-400"
                   )}>
-                    <Award className={cn("h-8 w-8", level.color === "gold" ? "text-yellow-900" : "text-gray-600")} />
+                    {level.icon}
                   </div>
-                  <h3 className="text-2xl font-bold">{level.name}</h3>
-                  <p className="text-sm text-muted-foreground">{level.minJamaah}</p>
+                  <h3 className="text-3xl font-bold">{level.name}</h3>
+                  <p className="text-lg text-muted-foreground">{level.minJamaah} Jamaah</p>
+                </div>
+                <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 mb-6">
+                  <p className="text-sm text-muted-foreground">Komisi per Closing</p>
+                  <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-green-600">
+                    {level.commission}
+                  </p>
                 </div>
                 <div className="space-y-4">
-                  <div className="text-center">
-                    <p className="text-sm text-muted-foreground">Komisi per Jamaah</p>
-                    <p className="text-2xl font-bold text-primary">{level.commission}</p>
-                  </div>
                   <div className="border-t pt-4">
-                    <p className="text-sm text-muted-foreground mb-2">Benefit:</p>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
-                        {level.bonus}
+                    <p className="text-sm font-medium text-muted-foreground mb-3">Benefit:</p>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <span className="font-medium">{level.bonus}</span>
                       </li>
-                      <li className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
-                        Starter kit digital
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <span>Starter kit digital premium</span>
                       </li>
-                      <li className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
-                        Akses grup pembinaan
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <span>Akses grup pembinaan eksklusif</span>
                       </li>
-                      <li className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
-                        Dashboard affiliate
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <span>Dashboard affiliate lengkap</span>
                       </li>
+                      {level.color === "gold" && (
+                        <li className="flex items-start gap-3">
+                          <Gift className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+                          <span className="font-bold text-yellow-700">🎁 Bonus Umroh Gratis jika capai 10 Jamaah!</span>
+                        </li>
+                      )}
                     </ul>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-muted-foreground">
+              <Shield className="h-4 w-4 inline mr-2" />
+              Upgrade level otomatis sesuai jumlah closing Anda
+            </p>
           </div>
         </div>
       </section>

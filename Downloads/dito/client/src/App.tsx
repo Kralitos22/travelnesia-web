@@ -8,13 +8,17 @@ import { AuthProvider } from "./contexts/AuthContext";
 import Home from "./pages/Home";
 import AffiliateLogin from "./pages/AffiliateLogin";
 import { AffiliatePage } from "./components/AffiliatePage";
-import { AffiliateDashboard } from "./components/AffiliateDashboard";
+import AffiliateDashboard from "./pages/AffiliateDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
+import JamaahLogin from "./pages/JamaahLogin";
+import TabunganJamaah from "./pages/TabunganJamaah";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/jamaah/login"} component={JamaahLogin} />
+      <Route path={"/tabungan"} component={TabunganJamaah} />
       <Route path={"/affiliate"} component={AffiliatePage} />
       <Route path={"/affiliate/login"} component={AffiliateLogin} />
       <Route path={"/affiliate/dashboard"} component={AffiliateDashboard} />

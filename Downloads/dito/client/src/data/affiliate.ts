@@ -4,12 +4,12 @@ export const affiliateBenefits = [
   {
     icon: Gift,
     title: "Komisi Menarik",
-    description: "Rp 500.000 - Rp 1.000.000+ per jamaah yang berangkat",
+    description: "Rp 2.000.000 - Rp 3.500.000 per jamaah yang berangkat",
   },
   {
     icon: TrendingUp,
-    title: "Level & Target",
-    description: "Basic, Silver, Gold - commission makin besar sesuai level",
+    title: "Level Terbatas",
+    description: "Hanya 2 tier - Silver & Gold dengan komisi lebih besar",
   },
   {
     icon: Award,
@@ -35,25 +35,22 @@ export const affiliateBenefits = [
 
 export const affiliateLevels = [
   {
-    name: "Basic",
-    minJamaah: "0-4 Jamaah/tahun",
-    commission: "Rp 500.000/jamaah",
-    bonus: "Starter kit digital",
-    color: "gray",
-  },
-  {
     name: "Silver",
-    minJamaah: "5-9 Jamaah/tahun",
-    commission: "Rp 750.000/jamaah",
-    bonus: "+ Bonus event Rp 300.000/jamaah",
+    minJamaah: "1-5 Jamaah",
+    commission: "Rp 2.000.000/jamaah",
+    bonus: "Starter kit digital + Akses grup pembinaan",
     color: "silver",
+    closingRequirement: 5,
+    icon: "🥈",
   },
   {
     name: "Gold",
-    minJamaah: "10+ Jamaah/tahun",
-    commission: "Rp 1.000.000/jamaah",
+    minJamaah: "5-10 Jamaah",
+    commission: "Rp 3.500.000/jamaah",
     bonus: "+ Bonus event Rp 500.000 + Umroh gratis",
     color: "gold",
+    closingRequirement: 10,
+    icon: "🥇",
   },
 ];
 
@@ -61,7 +58,7 @@ export const affiliateHowItWorks = [
   {
     step: "01",
     title: "Daftar Affiliate",
-    description: "Isi form registrasi + bayar Rp 150.000 (sekali seumur hidup). Dapat ID & Starter kit langsung.",
+    description: "Isi form registrasi + bayar Rp 200.000 (sekali seumur hidup). Dapat ID & Starter kit langsung.",
   },
   {
     step: "02",
@@ -76,7 +73,7 @@ export const affiliateHowItWorks = [
   {
     step: "04",
     title: "Komisi + Bonus",
-    description: "Dapat komisi per jamaah berangkat + bonus event. Komisi cair setelah pelunasan atau H-14.",
+    description: "Dapat komisi per jama after closing + bonus event. Komisi cair setelah pelunasan atau H-14.",
   },
 ];
 
@@ -86,7 +83,7 @@ export const affiliateFaqs = [
     answer: "Siapa saja! Alumni umroh, ustadz, pengurus masjid, komunitas muslim, influencer, atau siapapun yang serius ingin bisnis ibadah umroh.",
   },
   {
-    question: "Bagaimana cara afiliate mempromosikan?",
+    question: "Bagaimana cara affiliate mempromosikan?",
     answer: "Lewat obrolan langsung, media sosial (WhatsApp, Instagram, Facebook), atau membawa langsung ke event/kantor kami. Semua prospek dicatat dengan kode affiliate.",
   },
   {
@@ -98,12 +95,16 @@ export const affiliateFaqs = [
     answer: "Tidak ada target keras, tapi disarankan 2-3 calon jamaah per bulan. Affiliate yang tidak aktif 2 bulan akan dikategorikan dormant.",
   },
   {
-    question: "Apa yang didapat setelah daftar Rp 150.000?",
+    question: "Apa yang didapat setelah daftar Rp 200.000?",
     answer: "Kartu/ID affiliate resmi, akses grup pembinaan, starter kit digital (katalog, brosur, poster, caption, skrip), dan akses pelatihan singkat.",
   },
   {
     question: "Bagaimana cara klaim komisi?",
     answer: "Semua data prospek & komisi bisa dilihat di dashboard affiliate. Tim kami akan verify dan transfer komisi ke rekening affiliate setelah syarat terpenuhi.",
+  },
+  {
+    question: "Berbeda dengan program affiliate lainnya?",
+    answer: "Kami memberikan komisi yang jauh lebih besar karena fokus pada kualitas dan bukan kuantitas. Dengan hanya 2 tier, sistem lebih sederhana dan mudah dipahami.",
   },
 ];
 
@@ -112,24 +113,24 @@ export const affiliateTestimonials = [
     name: "Ustadz Ahmad Fauzi",
     role: "Pengurus Masjid Al-Ikhlas",
     text: "Sudah 3 kali dapat komisi dari Ditoris. Materi promonya lengkap dan gampang dipakai. Jamaah masjid saya banyak yang berangkat.",
-    hasil: "8 Jamaah | Rp 4.000.000",
+    hasil: "6 Jamaah | Rp 12.000.000",
   },
   {
     name: "Siti Nurhaliza",
     role: "Top Affiliate Gold 2025",
     text: "Gak nyangka bisa dapat reward umroh gratis di tahun pertama. Sistemnya transparan dan bayarnya selalu tepat waktu.",
-    hasil: "15 Jamaah | Umroh Gratis",
+    hasil: "8 Jamaah | Umroh Gratis",
   },
   {
     name: "H. Hasan Wijaya",
     role: "Alumni Umroh + Affiliate",
     text: "Dari alumni berubah jadi affiliate. Pengalaman umroh saya jadi makin berarti karena bisa bawa saudara-saudara lain berangkat.",
-    hasil: "5 Jamaah | Rp 2.500.000",
+    hasil: "4 Jamaah | Rp 8.000.000",
   },
 ];
 
 export const affiliateRegistration = {
-  fee: 150000,
+  fee: 200000,
   paymentInfo: {
     bank: "Bank BCA",
     account: "123-456-7890",
